@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>GeekHub. Educating talented youth.</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/style.css" />
+    <meta name="description" content="GeekHub is a free program lead by a team of IT professionals, that aims to teach talented youth the practical skills needed to launch a successful career in software development." />
+    <meta name="keywords" content="GeekHub, IT, software, education" />
+    <link rel="canonical" href="http://thegeekhub.org/" />
+
+    <script type="text/javascript" src="/js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="/js/stepcarousel.js"></script>
+    <script type="text/javascript">
+        var features_gallery = {
+            galleryid: 'features',
+            beltclass: 'content',
+            panelclass: 'slide',
+            autostep: {enable:true, moveby:1, pause:10000},
+            panelbehavior: {speed:500, wraparound:true, wrapbehavior:'pushpull|slide', persist:true},
+            defaultbuttons: {enable: false, moveby: 1, leftnav: ['images/slide_btn.png.png', -5, 80], rightnav: ['images/slide_btn.png.png', -20, 80]},
+            statusvars: ['statusA', 'statusB', 'statusC'],
+            contenttype: ['inline']
+        };
+        stepcarousel.setup(features_gallery);
+
+    </script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27082120-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+
+
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1><a href="/">GeekHub</a></h1>
+
+        <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li ><a href="/about.html">About</a>
+                <ul>
+                    <li><a href="/about/vision.html">Vision</a></li>
+                    <li><a href="/about/mission.html">Mission</a></li>
+                    <li><a href="/about/goals.html">Goals</a></li>
+                    <li><a href="/about/team.html">The Team</a></li>
+                </ul>
+            </li>
+            <li ><a href="/programs.html">Programs</a></li>
+            <li ><a href="/testimonials.html">Testimonials</a></li>
+            <li ><a href="/blog.html">Blog</a></li>
+            <li ><a href="/contacts.html">Contact Us</a></li>
+        </ul>
+        <span class="line"></span>
+        <div class="video">
+            <div>
+                <img src="/images/video_splash.png" class="play"/>
+                <iframe id="player" src="http://player.vimeo.com/video/42685887?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=FFFFFF&amp;player_id=player" width="493" height="276" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+        </div>
+        <script src="http://a.vimeocdn.com/js_v6/froogaloop2.min.js?77440-1338364748"></script>
+        <script>
+            jQuery('.video img').click(function(){
+                jQuery(this).fadeOut(1000);
+            });
+            (function(){
+                var vimeoPlayers = document.querySelectorAll('iframe'),
+                        player;
+
+                for (var i = 0, length = vimeoPlayers.length; i < length; i++) {
+                    player = vimeoPlayers[i];
+                    $f(player).addEvent('ready', ready);
+                }
+
+                function addEvent(element, eventName, callback) {
+                    if (element.addEventListener) {
+                        element.addEventListener(eventName, callback, false);
+                    }
+                    else {
+                        element.attachEvent('on' + eventName, callback);
+                    }
+                }
+
+                function ready(player_id) {
+                    var container = document.getElementById(player_id).parentNode.parentNode,
+                            froogaloop = $f(player_id),
+                            apiConsole = container.querySelector('.console .output');
+
+                    function apiLog(message) {
+                        apiConsole.innerHTML = message + '\n' + apiConsole.innerHTML;
+                    }
+
+                    function setupSimpleButtons() {
+                        var playBtn = container.querySelector('.play');
+
+                        addEvent(playBtn, 'click', function() {
+                            froogaloop.api('play');
+                        }, false);
+                    }
+
+                    setupSimpleButtons();
+                }
+            })();
+        </script>
+        <h2>GeekHub</h2>
+        <p>GeekHub is a free program lead by a team<br />of IT professionals, that aims to teach<br />talented youth the practical skills needed to launch a successful career in software development.</p>
+        <a class="contacts" href="/contacts.html">Contact Us</a>
+        <img src="/images/splash.png" alt="splash" />
+    </div>
+    <div class="home page page-id-24 page-parent page-template page-template-home-php">
+        <div id="content">
+            <div class="home">
+                <h2>Testimonials</h2>
+                <span class="shade-l"></span><span class="shade-r"></span>
+                <div id="features">
+                    <ul class="content">
+                        <li class="slide"><span><img src="/images/f-labay.jpg" alt="" /></span><h4>Alex Labay</h4><p>These guys really managed to do it, explaining even difficult terms and processes in a funky and understandable way.</p></li>
+                        <li class="slide"><span><img src="/images/f-chernov.jpg" alt="" /></span><h4>Alexandr Chernov</h4><p>The most important thing in Geekhub is that this program allows students and people with no experience to realize and implement their potential.</p></li>
+                        <li class="slide"><span><img src="/images/f-tkachenko.jpg" alt="" /></span><h4>Alexander Tkachenko</h4><p>I think Geekhub is a great opportunity to start your career in IT. Geekhub - is exactly what we need. You ask me what it can offer? The answer is rather simple but precise - really new technologies, new knowledge and of course new friends.</p></li>
+                        <li class="slide"><span><img src="/images/f-tsibrovski.jpg" alt="" /></span><h4>Sergey Tsibrovski</h4><p>Geekhub is a place where a novice programmer can receive necessary knowledge which can help them start a career in IT. The prorgram helps me apply my knowledge to real world tasks, something that I cannot get in the university.</p></li>
+                    </ul>
+                </div>
+                <div id="features-paginate">
+                    <img src="/images/slide_btn.png" data-over="/images/slide_btn.png" data-select="/images/slide_btn_active.png" data-moveby="1" />
+                </div>
+                <h2>The courses</h2>
+                <ul class="types">
+                    <li><img src="images/html_css.png"/><br />
+                        <h3>Front-end development</h3>
+                        <p>The “Front-end development” course deals with all things that the end user interacts with in the system. Students in this course learn semantic markup, (X)HTML, CSS, Javascript, AJAX, integration with popular services like Facebook, Twitter, Paypal, Authorize.net, etc.</p>
+                    </li>
+                    <li><img src="images/web_programming.png"/><br />
+                        <h3>Advanced PHP and frameworks</h3>
+                        <p>In this class, students are learning object oriented programming and the most popular PHP framework to date &#8212; Symfony. Students of this course are able to implement business logic for web-based products.</p>
+                    </li>
+                </ul>
+                <ul class="social_share">
+                    <li><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FGeekHub%2F158983477520070&amp;width=276&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;height=218&amp;appId=264614506901604" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:276px; height:218px;" allowTransparency="true"></iframe></li>
+                    <li class="sertificates_list"><h4><a href="/certified-professionals">Certified professionals</a></h4></li>
+                    <li>
+                        <h4>Our sponsors</h4>
+                        <ul>
+                            <li class="de"><a href="http://povnahata.com">The House of Gospel</a></li>
+                            <li class="moc"><a href="http://masterofcode.com">Masterofcode LTD</a></li>
+                            <li class="sergium"><a href="http://sergium.net">SerGium.net</a></li>
+                            <li class="clear left stuff"><a href="http://svai.net/">svai.net</a></li>
+                            <li class="youthog"><a href="http://yothog.com">yothog.com</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <ul id="footer">
+        <li style="width:60%">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/about.html">About</a>
+                    <ul>
+                        <li><a href="/about/vision.html">Vision</a></li>
+                        <li><a href="/about/mission.html">Mission</a></li>
+                        <li><a href="/about/goals.html">Goals</a></li>
+                        <li><a href="/about/team.html">The Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/programs.html">Programs</a></li>
+                <li><a href="/testimonials.html">Testimonials</a></li>
+                <li><a href="/supporters.html">Supporters</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contact Us</a></li>
+            </ul>
+        </li>
+        <li style="width:39%">&copy; Copyright 2011</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    // <![CDATA[
+    var disqus_shortname = 'geekhub';
+    (function () {
+        var nodes = document.getElementsByTagName('span');
+        for (var i = 0, url; i < nodes.length; i++) {
+            if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                url = nodes[i].parentNode.href.split('#', 1);
+                if (url.length == 1) url = url[0];
+                else url = url[1]
+                nodes[i].parentNode.href = url + '#disqus_thread';
+            }
+        }
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://disqus.com/forums/' + disqus_shortname + '/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    //]]>
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27082120-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+</script>
+</body>
+</html>
