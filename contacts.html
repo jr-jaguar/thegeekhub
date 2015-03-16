@@ -1,168 +1,141 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html dir="ltr" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8" />
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <title>Contact Us | GeekHub</title>
-    <link rel="stylesheet" type="text/css" media="all" href="/styles/style.css" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>Зв'язок з командою GeekHub</title>
+    <meta name="description" content="Є запитання? Потрібно більше інформації про GeekHub? Зв'яжіться з нами, будемо раді допомогти.">
+    <meta name="keywords" content="зв'язок, contact">
 
-    <meta name="description" content="Phone Us Email Us" />
-    <link rel="canonical" href="http://thegeekhub.org/contacts" />
-
+	<link href="style.css" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript">
+      function initialize() {
+        var latlng = new google.maps.LatLng(49.42608363349172,32.09461569786072);
+        var myOptions = {
+          zoom: 15,
+          center: latlng,
+            panControl: true,
+            zoomControl: true,
+            mapTypeControl: true,
+            scaleControl: false,
+            streetViewControl: false,
+            overviewMapControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            title:"Дім Євангелія, вул. Горького 60"
+        });
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-27082120-2']);
-        _gaq.push(['_trackPageview']);
+        var infowindow = new google.maps.InfoWindow({
+            content: marker.title
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+        marker.setMap(map);
+      }
 
     </script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27082120-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+	</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter17027506 = new Ya.Metrika({id:17027506, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/17027506" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
-<body class="inner">
+<body class="inner" onload="initialize()">
 <div id="wrap">
-    <div id="header">
-        <div id="site-title">
-					<span>
-						<a href="/" title="GeekHub" rel="home">GeekHub</a>
-					</span>
-        </div>
-
+	<div id="header">
+		<h1><a href="/">GeekHub</a></h1>
         <ul class="nav">
-            <li ><a href="/">Home</a></li>
-            <li ><a href="/about.html">About</a>
-                <ul>
-                    <li><a href="/about/vision.html">Vision</a></li>
-                    <li><a href="/about/mission.html">Mission</a></li>
-                    <li><a href="/about/goals.html">Goals</a></li>
-                    <li><a href="/about/team.html">The Team</a></li>
-                </ul>
-            </li>
-            <li ><a href="/programs.html">Programs</a></li>
-            <li ><a href="/testimonials.html">Testimonials</a></li>
-            <li ><a href="/blog.html">Blog</a></li>
-            <li class="active"><a href="/contacts.html">Contact Us</a></li>
+            <li><a href="/">Головна</a></li>
+            <li><a href="/about.html">Про GeekHub</a></li>
+            <li><a href="/team.html">Команда</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li class="active"><a href="/contacts.html">Зв’язок</a></li>
         </ul>
-    </div>
-
-    <div class="page page-id-12 page-template page-template-contacts-php">
-
-        <script type="text/javascript">
-            function initialize() {
-                var myLatlng = new google.maps.LatLng(49.42608363349172, 32.0946156978607);
-                var myOptions = {
-                    zoom: 15,
-                    center: myLatlng,
-                    panControl: true,
-                    zoomControl: true,
-                    mapTypeControl: true,
-                    scaleControl: false,
-                    streetViewControl: false,
-                    overviewMapControl: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(document.getElementById("gmap"), myOptions);
-
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    title:"Дім Євангелія, вул. Горького 60"
-                });
-                var infowindow = new google.maps.InfoWindow({
-                    content: marker.title
-                });
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map,marker);
-                });
-                marker.setMap(map);
-            }
-
-            function loadScript() {
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
-                document.body.appendChild(script);
-            }
-
-            window.onload = loadScript;
-        </script>
-
-        <div id="content" role="main">
-            <div class="contacts">
-                <h2 class="entry-title">Contact Us</h2>
-                <dl>
-                    <dt><h3>Feel free to contact us with ways we can improve the program, partner or help you in your endeavour</h3></dt>
-                    <dd class="map"><div id="gmap" style="width:382px; height:287px"></div></dd>
-                    <dt class="phone">
-                    <h3>Phone Us</h3>
-                    </dt>
-                    <dd><img src="/images/phone.png" alt="phone" /></dd>
-                    <dt>
-                    <h3>Email Us</h3>
-                    </dt>
-                    <dd><img src="/images/email.png" alt="email" /></dd>
-                </dl>
-            </div>
-        </div>
-    </div>
-
-    <ul id="footer">
-        <li style="width:60%">
-            <ul class="nav">
-                <li><a href="/">Home</a></li>
-                <li class="active"><a href="/about.html">About</a>
+        <ul class="links">
+            <li class="fb"><a href="http://www.facebook.com/pages/GeekHub/158983477520070">facebook</a></li>
+            <li class="vk"><a href="http://vkontakte.ru/geekhub">Вконтакте</a></li>
+            <li class="tw"><a href="http://twitter.com/#!/geek_hub">twitter</a></li>
+            <li class="yb"><a href="http://www.youtube.com/user/GeekHubchannel">youtube</a></li>
+        </ul>
+	</div><!-- header -->
+	<div id="content">
+        <div class="contacts">
+            <h2>Зв’язок</h2>
+            <dl>
+                <dt class="map">
+                    <h3>Заходьте</h3>
+                </dt>
+                <dd class="map"><div id="map" style="width:382px; height:287px"></div></dd>
+                <dt class="follow">
+                    <h3>Слідкуйте</h3>
+                </dt>
+                <dd>
                     <ul>
-                        <li><a href="/about/vision.html">Vision</a></li>
-                        <li><a href="/about/mission.html">Mission</a></li>
-                        <li><a href="/about/goals.html">Goals</a></li>
-                        <li><a href="/about/team.html">The Team</a></li>
+                        <li class="fb"><a href="http://www.facebook.com/pages/GeekHub/158983477520070">facebook</a></li>
+                        <li class="vk"><a href="http://vkontakte.ru/geekhub">vkontakte</a></li>
+                        <li class="tw"><a href="http://twitter.com/#!/geek_hub">twitter</a></li>
                     </ul>
-                </li>
-                <li><a href="/programs.html">Programs</a></li>
-                <li><a href="/testimonials.html">Testimonials</a></li>
-                <li><a href="/supporters.html">Supporters</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contacts.html">Contact Us</a></li>
+                </dd>
+                <dt>
+                    <h3>Пишіть</h3>
+                </dt>
+                <dd>
+                    <img src="/images/email.png" alt="email"/>
+                </dd>
+                <dd>Перед тим як писати, ознайомтесь <br>із <a href="faq.html" >сторінкою ПОПУЛЯРНИХ ПИТАНЬ</a></dd>
+
+            </dl>
+        </div>
+	</div><!-- content -->
+    <ul id="footer">
+        <li>
+            <ul class="nav">
+                <li><a href="/">Головна</a></li>
+                <li><a href="/about.html">Про GeekHub</a></li>
+                <li><a href="/team.html">Команда</a></li>
+                <li><a href="/contacts.html">Зв’язок</a></li>
             </ul>
         </li>
-        <li style="width:39%">&copy; Copyright 2011</li>
+        <li>© Copyright 2011</li>
     </ul>
 </div>
-<script type="text/javascript">
-    // <![CDATA[
-    var disqus_shortname = 'geekhub';
-    (function () {
-        var nodes = document.getElementsByTagName('span');
-        for (var i = 0, url; i < nodes.length; i++) {
-            if (nodes[i].className.indexOf('dsq-postid') != -1) {
-                nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
-                url = nodes[i].parentNode.href.split('#', 1);
-                if (url.length == 1) url = url[0];
-                else url = url[1]
-                nodes[i].parentNode.href = url + '#disqus_thread';
-            }
-        }
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://disqus.com/forums/' + disqus_shortname + '/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    //]]>
-</script>
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-27082120-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-    })();
-</script>
 </body>
 </html>

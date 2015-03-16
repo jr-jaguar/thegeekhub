@@ -3,12 +3,16 @@
 //** Usage Terms: http://www.dynamicdrive.com/notice.htm
 //** Current version 1.91 (Aug 15th, 11'): See http://www.dynamicdrive.com/dynamicindex4/stepcarouselchangelog.txt for details
 
+function stepToo (int){
+    stepcarousel.stepTo('media_slider',int+1);
+}
+
 jQuery(document).ready(function() {
-    jQuery('.home > .shade-l').click(function() {
-        stepcarousel.stepBy('features', -1)
+    jQuery('#header').mouseover(function() {
+        jQuery(this).addClass("stop");
     });
-    jQuery('.home > .shade-r').click(function() {
-        stepcarousel.stepBy('features', 1)
+    jQuery('#header').mouseout(function() {
+        jQuery(this).removeClass("stop");
     });
 });
 
@@ -138,8 +142,8 @@ var stepcarousel={
 
 	stepTo:function(galleryid, pindex){ /*User entered pindex starts at 1 for intuitiveness. Internally pindex still starts at 0 */
         ///////
-//        if (galleryid == 'features')
-//        stepToo(pindex-1);
+        if (galleryid == 'features')
+        stepToo(pindex-1);
         ///////
 
         
@@ -203,8 +207,8 @@ var stepcarousel={
 		this.statusreport(galleryid)
 
         ///////
-//        if (galleryid == 'features')
-//        stepToo(pindex);
+        if (galleryid == 'features')
+        stepToo(pindex);
         ///////
 	},
 

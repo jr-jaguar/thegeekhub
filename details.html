@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>Деталі курсів</title>
+    <meta name="description" content="Знай своїх героїв - знайомтеся ближче з тими, хто робить GeekHub реальністю.">
+    <meta name="keywords" content="команда GeekHub, team, команда">
+	<link href="style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript">
+        function showIndex(index) {
+            $('.sidebar li.current').removeClass('current');
+            $('.sidebar > ul > li:eq('+index+')').addClass('current');
+
+            $('.details li.current').slideUp().removeClass('current');
+            var li = $('.details > ul > li:eq('+index+')');
+            li.addClass('current').slideDown();
+        }
+        $(function(){
+            var location = window.location.href;
+            var index = 0;
+            if(location.split('?').length > 1)
+            {
+                index = location.split('?')[1].replace("#","");
+            }
+            showIndex(index)
+
+            $('.sidebar li a').click(function(){
+               var index = $(this).parent().index();
+                showIndex(index);
+                
+                return false;
+            });
+            $('.details a.register').click(function(){
+                var index = $(this).parent().index();
+                window.location = '/signup.php?'+index;
+
+                return false;
+            });
+        });
+    </script>
+	<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27082120-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+	</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter17027506 = new Ya.Metrika({id:17027506, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/17027506" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body class="inner">
+<div id="wrap">
+	<div id="header">
+		<h1><a href="/">GeekHub</a></h1>
+        <ul class="nav">
+            <li><a href="/">Головна</a></li>
+            <li><a href="/about.html">Про GeekHub</a></li>
+            <li><a href="/team.html">Команда</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/contacts.html">Зв’язок</a></li>
+        </ul>
+        <ul class="links">
+            <li class="fb"><a href="http://www.facebook.com/pages/GeekHub/158983477520070">facebook</a></li>
+            <li class="vk"><a href="http://vkontakte.ru/geekhub">Вконтакте</a></li>
+            <li class="tw"><a href="http://twitter.com/#!/geek_hub">twitter</a></li>
+            <li class="yb"><a href="http://www.youtube.com/user/GeekHubchannel">youtube</a></li>
+        </ul>
+	</div><!-- header -->
+	<div id="content">
+        <div class="sidebar">
+            <h3>НАШІ КУРСИ</h3>
+            <ul>
+                <li><a href="#">Frontend CMS</a></li>
+                <li><a href="#">Advanced CMS</a></li>
+                <li><a href="#">Advanced PHP</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">iOS</a></li>
+                <li><a href="#">Android</a></li>
+                <li><a href="#">Ruby on Rails</a></li>
+                <li><a href="#">Groovy & Grails</a></li>
+                <li><a href="#">Java for Web</a></li>
+                <li><a href="#">Project Management</a></li>
+                <li><a href="#">Quality Assurance</a></li>
+                <li><a href="#">Business English</a></li>
+                <li><a href="#">Web & Mobile Design</a></li>
+                <li><a href="#">Game Development</a></li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul>
+                <li>
+                    <img src="images/icon-frontend.png" alt="frontend">
+                    <h2>Frontend CMS</h2>
+                    <p>Цей курс допоможе вам навчитися створювати веб сайти на основі системи керування контентом. Все, від скінування дизайну до підключення CMS. Цей курс дасть вам чудовий старт для фріланса або роботи в компанії.</p>
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/jack.png" />
+                            <h3>Євген Григор’єв</h3>
+                            <p>Працює з рядом технологій, включаючи Symfony, Drupal, jQuery, Compass CSS, HAML, etc. Майстерність Євгена стоїть за такими проектами як Belvilla, Yes or No, Jongenvrij webshop, USGA та багато інших. У GeekHub викладає Frontend + CMS.</p>
+                        </li>
+                        <li>
+                            <img src="images/alexander_tinyaev.png" />
+                            <h3>Олександр Тіняєв</h3>
+                            <p>Алекс (або ж Дікс, як його всі кличуть) займається Frontend, AngularJS, Sencha Touch та Wordpress розробкою в N3w Normal LLC вже протягом двох років. У GeekHub викладає Frontend + CMS.</p>
+                        </li>
+                        <li>
+                            <img src="images/lavrenko_andriy.png" />
+                            <h3>Лавренко Андрій</h3>
+                            <p>Працює з рядом технологій, включаючи HTML5/CSS3, jQuery, SASS/SCSS/LESS, CoffeeScript, HAML, Twig, Require JS, Titanium SDK. Обожнює "чистий" код. У GeekHub викладає Frontend + CMS.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Що таке HTML (Wikipedia)</li>
+                        <li>Що таке CSS (Wikipedia)</li>
+                        <li>- Основи роботи інтернету (сервер, браузер, домен і т.п.). Матеріал брати тут: <a href="https://vk.com/videos-30111409">https://vk.com/videos-30111409</a> (Урок 1-4)</li>
+                    </ul>
+                    <h3>Слово від викладачів</h3>
+                    <p>Групові заняття проводитимуться 1 раз в тиждень ввечері, домашнє завдання на кожен урок складатиметься з 3 частин (що вимагатиме від студента мінімум 3 рази на тиждень приділяти увагу курсам вдома).</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-adv-cms.png" />
+                    <h2>Advanced CMS</h2>
+                    <p>Курс для тих, хто хоче навчитися створювати сайти різного рівня складності за допомогою популярних CMS Wordpress та Drupal. Якщо ви хочете робити вебсайти як професіонал, цей курс для вас. Особливості різних CMS, використання та написання плагінів та компонентів, інтеграція із соціальними мережами та сторонніми сервісами.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/sergii_gychka.png" />
+                            <h3>Сергій Гичка</h3>
+                            <p>Сергій займається розробкою веб проектів, використовуючи такі технології як Symfony 1, 2, Zend framework, Drupal, mysql, JS. У GeekHub Сергій викладає Advanced CMS.</p>
+                        </li>
+                        <li>
+                            <img src="images/yaschuk.png" />
+                            <h3>Владислав Ящук</h3>
+                            <p>Владислав займається розробкою веб проектів, використовуючи такі фреймворки як Symfony 2, Yii; CMS - Joomla, Wordpress, Magento. На GeekHub Владислав викладає курс Advanced CMS.</p>
+                        </li>
+
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Базові знання HTML / CSS (HTML: структура сторінки, теги, посилання, зображення, форми, талиці; CSS: селектори, наслідування, псевдокласи, ідентифікатори і класи, інтеграція css-файлів з HTML)</li>
+                        <li>Базові знання PHP (синтаксис мови, основи ООП)</li>
+                        <li>Базові знання JavaScript (синтаксис, основи работи з JQuery)</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-adv-php.png" />
+                    <h2>Advanced PHP</h2>
+                    <p>AdvancedPHP для тих хто хоче розвивати свої базові навички в PHP. Курс заглиблюється у вивчення ООП, MVC та паттернiв проектування на базі найпопулярнішого php фреймворку Symfony2. Курс буде корисний тим, хто вже спробував себе у написанні простих сайтів/web-додаткiв за допомогою популярних платформ, таких як Joomla, WP ect. AdvancedPHP для тих хто хоче прокачати свої знання та навички для виходу на новий рівень, де вiдсутнi обмеження платформ чи мов програмування.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/oleg_zinchenko.png" />
+                            <h3>Олег Зінченко</h3>
+                            <p>Олег професiйно займаеться розробкою веб додаткiв на PHP з використанням сучасних фреймфоркiв. Адепт Symfony2 та MongoDB. Координатор та викладач напрямку Advanced PHP.</p>
+                        </li>
+                        <li>
+                            <img src="images/polischuk.png" />
+                            <h3>Сергій Поліщук</h3>
+                            <p>Студент GeekHub у минулому, а зараз - backend девелопер в успішній продуктовій компанії США. Сергій полюбляє складні завдання та прості рішення. У GeekHub викладає Advanced PHP. </p>
+                        </li>
+                        <li>
+                            <img src="images/dmytro_nemesh.png" />
+                            <h3>Дмитро Немеш</h3>
+                            <p>Дмитро вже багато років розробляє web проекти, має досвід з Yii\Yii2, Symfony2, Spring 3. Є контриб'ютором Yii2 та полюблюяє використовувати нові технології. У GeekHub викладає Advanced PHP.</p>
+                        </li>
+                        <li>
+                            <img src="images/iana_semenova.png" />
+                            <h3>Яна Семенова</h3>
+                            <p>Молода і дуже талановита. Протягом всього кількох років змогла побудувати успішну кар’єру в ІТ. У GeekHub викладає Advanced PHP.</p>
+                        </li>
+                        <li>
+                            <img src="images/piskovoj_dmitrij.png" />
+                            <h3>Пiсковий Дмитро</h3>
+                            <p>Дмитро займається розробкою веб проектів, використовуючи такі технології як Symfony (1, 2) , Zend Framework, Yii, nodeJs, mysql, mongoDB, JS, angular.js. У GeekHub Дмитро викладає Advanced PHP.</p>
+                        </li>
+                        <li>
+                            <img src="images/konstantin_perevozchikov.png" />
+                            <h3>Костянтин Перевозчиков</h3>
+                            <p>Фрілансер. frontend/backend developer веб додатків. Улюблений PHP фреймворк - Yii. Прихильник масимальної автоматизації розробки. У GeekHub викладає Advanced PHP.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Базові знання HTML / CSS (HTML: структура сторiнки, теги, посилання, зображення, форми, таблицi; CSS: селектори, наслiдування, псевдокласи, iдентифiкатори i класи, iнтеграцiя css-файлiв у HTML)</li>
+                        <li>Базові знання PHP - ситаксис, змінні, оператори та конструкції (if, for, foreach etc.)</li>
+                        <li>Базовий рівень англійської в IT (розумiння технiчної літератури і документації, вміння називати змінні англійською);</li>
+                        <li>Загальне розуміння роботи web (протоколи (http, ...), методи (POST, GET, ...), заголовки (cookies, …), коди відповідей (404, 302, ...), сервери, домени, браузери, кукі);</li>
+                        <li>Базові UNIX команди (ls, cp, mv, rm, chmod (в т.ч. опції), mkdir, ssh);</li>
+                        <li>Встановлена UNIX система на ноутбуці й вміння з нею управлятися (Ubuntu, Mac OS X і т.д.);</li>
+                        <li>Велике бажання й мотивація :)</li>
+                    </ul>
+                    <h3>Слово від викладачів</h3>
+                    <p>Курс Advanced PHP буде складатися з трьох потоків - 2 з яких Symfony2 і 1 - Yii2. Перший місяць навчання буде відведено на загальні для всіх потоків теми, такі як Git, ООП, Composer, TDD. До нового року створимо простий тестовий проект. У другому півріччі будемо розділятися по командах (3-4 чоловіки) щоб виконати фінальний випускний проект.</p>
+                    <p>Протягом всього навчального року викладачі будуть приділяти максимум уваги тим студентам які зможуть показати свої здібності до навчання та матимуть можливість (і звичайно використовуватимуть її) працювати самостійно не менш ніж 10 год/тиждень. Для цього, раз на місяць, будуть проводитись автоматичні тестування, а також буде братися до уваги активність кожного студента на GitHub.</p>
+                    <p>Випускники курсу Advanced PHP мають впевнено та доцільно використовувати паттерни проектування, знати та вміти використовувати вибраний фреймворк для побудови масштабованих, тестованих сервісів з відкритим REST API.</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-js.png" />
+                    <h2>JavaScript</h2>
+                    <p>Курс призначений для людей, які хочуть вивчити Javascript зсередини. Курс включає: вивчення мови в деталях, техніки програмування та фреймворків, необхідних, щоб зробити все: від швидкого AJAX додадку, до сучасних великомасштабних додатків.</p>
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/kluchnik.png" />
+                            <h3>Сергій Ключник</h3>
+                            <p>Активний учасник багатьох відкритих проектів, завжди вивчає щось нове зі світу JavaScript. У GeekHub викладає Javascript.</p>
+                        </li>
+                        <li>
+                            <img src="images/fred_cox.png" />
+                            <h3>Fred Cox</h3>
+                            <p>Fred has been coding for over 10 years, his first mobile app was published before anyone knew what a smartphone was. Now he the techinal lead at eKreative where the focus is on web and mobile apps. Teaches Javascript at GeekHub.</p>
+                        </li>
+                        <li>
+                            <img src="images/valerii_oleksienko.png" />
+                            <h3>Валерій Олексієнко</h3>
+                            <p>Backend та frontend веб-розробник. Основні технології, з якими працює: Spring (MVC, Security), Hibernate, mySql, MongoDB, jQuery, Ext.js Хоббі включають сноуборд, музика, mobile development. У GeekHub Валерій викладає Java for Web.</p>
+                        </li>
+                    </ul>
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Базові знання HTML</li>
+                        <li>Базові знання ООП</li>
+                        <li>Навички програмування на скриптовій мові програмування</li>
+                        <li>Синтаксис javascript</li>
+                    </ul>
+                    <h3>Слово від викладачів</h3>
+                    <p>JS - незвичайна мова, тому будемо максимально концентруватись спочатку на ній, потім на инструментах розробки, в кінці - на фрейморках. Протягом курсу будуть проводитись міні-екзамени для перевірки засвоеного. Також будуть практичні уроки. На курс набирається 2 потоки, по два викладача на потік, тому кожному учню буде достатньо уваги.</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-ios.png" />
+                    <h2>iOS</h2>
+                    <p>Курс для швидкого старту в розробці програмного забезпечення під популярну мобільну платформу iOS.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/timothy_kozak.png" />
+                            <h3>Тимофій Козак</h3>
+                            <p><a href="http://ua.linkedin.com/in/timothykozak">Тимофій</a> працює одночасно над декількома проектами - presentain.com, vkorange.com, chedream.org, geekhub.ck.ua". У GeekHub викладає курс iOS.</p>
+                        </li>
+                        <li>
+                            <img src="images/nadolinskiy.png" />
+                            <h3>Павло Надолинський</h3>
+                            <p>Він бачив багато і може з радістю цим поділитися. У GeekHub викладає iOS.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>(Ноутбук з OS X) АБО (PC з OS X + iPhone/iPad/iPod Touch)</li>
+                        <li>Базові навички програмування. (змінні, функції, цикли, умови, типи данних, алгоритми)</li>
+                        <li>Базові знання ООП</li>
+                        <li>Базовий рівень англійської в IT (вміння розуміти технічну літературу і документацію, називати змінні англійською);</li>
+                    </ul>
+                    <h3></h3>
+                    <p>Курс розрахований на новачків.
+                    <p>Однією з вимог є компютер з встановленою операційною системою OS X, віднесіться до цього відповідально, так як без нього робити на курсі вам нічого.</p>
+
+                    <p>Що будемо вчити:<br />
+                        Курс складається з 2х частин. 1ша - ви попарно пишете програму, яку ми вам замовляємо. 2га - ви робите випускну програму, яку самі вигадаєте. Ми дамо вам всі знання, щоб ви могли зробити 1шу. На основі другої ви або отримаєте, або не отримаєте випускний сертифікат.</p>
+                    <p>Шлангування і поблажки - це не у нас.</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-android.png" />
+                    <h2>Android</h2>
+                    <p>Android - найпопулярніша операційна система для смартфонів. В цьому курсі ми охопимо найважливіші елементи побудови додатків для цієї платформи. Ознайомимося з основними компонентами UI та UX. Навчимося їх правильно використовувати. Також навчимося працювати в команді та побудуємо корисні додатки.</p>
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/dmytro_tarianyk.png" />
+                            <h3>Дмитро Таряник</h3>
+                            <p>Android розробник, активный учасник GDG Cherkasy. У GeekHub викладає Android. На рахунку Дмитра такі проекти як <a href="https://play.google.com/store/apps/details?id=com.heineken.magazineapp">Heineken Nederland Magazine</a>, <a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android">LifeChurch Android app</a>. У GeekHub викладає Java for Android.</p>
+                        </li>
+                        <li>
+                            <img src="images/boss.png" />
+                            <h3>Сергій Босовський</h3>
+                            <p>Cергій протягом 4х років займається розробкою Android додатків в компанії Master Of Code. У GeekHub Сергій викладає Java for Android.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Знання ООП</li>
+                        <li>Базові знання JAVA (синтаксис, класи, інтерфейси, колекції, наслідування тощо)</li>
+                    </ul>
+                    <h3></h3>
+                    <p>Курс передбачає базові знання Java або здатність швидко здобути ці знання.</p>
+                    <p>Протягом курсу ви розробите 3 додатка для Android. Третій додаток ви напишете попарно. На основі нього, а також випускної співбесіди буде визначено, отримаєте ви сертифікат чи ні."</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-ruby.png" />
+                    <h2>Ruby on Rails</h2>
+                    <p>Ruby on Rails (RoR) є популярним та затребуваним фреймворком для написання веб-сервісів на мові програмування Ruby. Використовуючи основні переваги Ruby (динамічна мова для об'єктно-орієнтовного програмування, що відрізняється лаконічністю і інтуітивністю) та еталонної MVC архітектури — RoR дозволяє розробляти якісні веб-сервіси швидкими темпами. Серед веб-проектiв, що написані на Ruby on Rails можна виділити — GitHub, Twitter, Basecamp, Groupon, YP, Shopify та інші.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/pasko.png" />
+                            <h3>Олег Пасько</h3>
+                            <p>Олег полюбляє розв'язувати бізнес-задачі в IT за допомогою RoR. На рахунку Олега такі проекти як <a href='http://shopius.ru'>shopius.ru</a>, <a href='http://totravelme.ru'>totravelme.ru</a>, <a href='http://clickaway.ru'>clickaway.ru</a> та ряд інших цікавих проектів для різних компаній. У GeekHub Олег викладає Ruby on Rails.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Базові знання HTML / CSS (HTML: структура сторiнки, теги, посилання, зображення, форми, таблицi; CSS: селектори, наслiдування, псевдокласи, iдентифiкатори i класи, iнтеграцiя css-файлiв у HTML)</li>
+                        <li>Базовий рівень англійської в IT (розумiння технiчної літератури і документації, вміння називати змінні англійською);</li>
+                        <li>Загальне розуміння роботи web (протоколи (http, ...), методи (POST, GET, ...), заголовки (cookies, …), коди відповідей (404, 302, ...), сервери, домени, браузери, кукі);</li>
+                        <li>Базові UNIX команди (ls, cp, mv, rm, chmod (в т.ч. опції), mkdir, ssh);</li>
+                        <li>Встановлена UNIX система на ноутбуці й вміння з нею управлятися (Ubuntu, Mac OS X і т.д.);</li>
+                        <li>Велике бажання й мотивація :)</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-grails.png" />
+                    <h2>Groovy & Grails</h2>
+                    <p>Познайомтесь з одним з найпотужніших фреймворків для швидкої розробки веб-додатків. Гнучкість динамічної мови Groovy (що є надмножиною Java, що на 100% сумiсна Groovy) поєднуються з силою та рiзноманiтнiстю Java бiблiотек та фреймворкiв. Grails - це не тільки набір бібліотек, але й певна філософія розробки, що базуеться на паттернах та найкращих практиках, які стали загальноприйнятими не тільки в середовищі Java, але й в програмуванні вцілому. Спираючись на відносно низький поріг входження, ми спробуемо розглянути повний цикл розробки веб-додатку: побудова інтерфейсу, обробка внутрішньої логіки, зберігання даних.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/bogdan_danilyuk.png" />
+                            <h3>Богдан Данилюк</h3>
+                            <p>Богдан один з головних розробників компанії TransferWise. Прихильник швидких, динамічних та надійних рішень у розробці програмного забезпечення. Викладатиме курс улюбленої мови програмування та фреймворку - Groovy & Grails.</p>
+                        </li>
+                        <li>
+                            <img src="images/vadym_vasiliev.png" />
+                            <h3>Вадим Васильєв</h3>
+                            <p>Вадим розробник у компанії TransferWise. У попередньому працював розробником та консультантом у банках різних країн Європи та світу. У GeekHub викладає Groovy & Grails.</p>
+                        </li>
+                        <li>
+                            <img src="images/sergiy_karpenko.png" />
+                            <h3>Сергій Карпенко</h3>
+                            <p>Сергій один з перших розробників у компанії TransferWise. У GeekHub викладає Groovy & Grails.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Знання структур данних та основ програмування (цикли, розгалудження і т.д.)</li>
+                        <li>Базові знання HTML/CSS</li>
+                        <li>Базові знання ООП</li>
+                        <li>Базовий рівень англійської в IT</li>
+                        <li>Загальне розуміння роботи web (протоколи, http статуси/заголовки/кукі, структура URL)</li>
+                        <li>Можливі питання базового рівню по Java, Unix командам та теорії баз данних."</li>
+                    </ul>
+                    <h3>Слово від викладачів</h3>
+                    <p>Команда викладачів курсу Groovy & Grails хотіла б привернути увагу людей з досвідом програмування (бажано java-stack), що хочуть вивчити новий та потужний інструмент для побудови свого проекту/стартапу. У той же час, керуючись досвідом минулого року, можна сказати, що низький поріг входження та краса :) Groovy & Grails дозволяють успішно завершити цей курс наполегливим студентам, які ще не мають бойового досвіду у програмуванні. Програма курсу дає можливість поступово освоїти Groovy та Grails. Починаючи з основи синтаксису і shell-скриптів на Groovy, і закінчуючи побудовою модульного та добре налаштованого Grails проекту. Під час курсу ми також розглянемо найкращі практики програмування та шаблони проектування (design patterns).</p>
+                        <p>Для проходження курсу рекомендовано:<br />
+                        - ознайомитися з основами Java та особливостями роботи JVM<br />
+                        - мати ноутбук, бажано з UNIX системою та вмінням управлятися з нею (Linux Mint, Ubuntu, Mac OS X і т.д.)<br />
+                        - велике бажання та мотивація :)"</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-java.png" />
+                    <h2>Java for Web</h2>
+                    <p>Java -- це основа ентерпрайз технологій. Ви ознайомитесь із мовою, основними классами і пакетами, а також найбільш популярними та потужними фреймворками для розробки веб-аплікейшенів. Курс вимагає підвищеного рівня самостійної роботи, але отримані знання приносять особливу винагороду в роботі.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/jura_batora.png" />
+                            <h3>Юра Батора</h3>
+                            <p>Юра займається розробкою комерційних проектів на Java зі складною клієнт-серверною архітектурою.	У GeekHub викладає Java for Web.</p>
+                        </li>
+                        <li>
+                            <img src="images/bogdan_haliapin.png" />
+                            <h3>Богдан Халяпін</h3>
+                            <p>Богдан керує компанією SPD-Ukraine та займається її розвитком. Має більше ніж 12 років досвіду з Java. У складі GeekHub Богдан є викладачем та координатором групи Java for Web.</p>
+                        </li>
+                        <li>
+                            <img src="images/bereza.png" />
+                            <h3>Андрій Береза</h3>
+                            <p>Андрій  - сертифікований Java 7 Programmer з великим досвідом реалізації back-end та front-end, у тому числі на проектах створення фінансових систем. У GeekHub викладає Java for Web.</p>
+                        </li>
+                        <li>
+                            <img src="images/volodymyr_bilous.png" />
+                            <h3>Володимир Білоус</h3>
+                            <p>Володимир є Java та Android розробником у SPD-Ukraine. Його основний проект -- nimblecommerce.com, що є яскравим прикладом реалізації eCommerce SaaS	У GeekHub викладає Java for Web.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Знання ООП</li>
+                        <li>Базові знання JAVA (синтаксис, класи, інтерфейси, колекції, тощо)</li>
+                        <li>Основи веб-программування (протоколи, типи HTTP-запитів, DNS, etc.)</li>
+                        <li>Базовий рівень англійської</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-pm.png" />
+                	<h2>Project Management</h2>
+                	<p>Щоб стати досвідченим менеджером проектів потрібні роки спроб та помилок. Geekhub дає вам можливість набути практичних навичок та уникнути неприємних ситуацій в реальній роботі. Ми навчимо вас розуміти бізнес, відносини із клієнтами, девелоперами та звичайно вивчемо методології ведення проектів.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/alona_lisicina.png" />
+                            <h3>Альона Лісіцина</h3>
+                            <p>Альона має науковий ступінь PhD та працює головним проектним менеджером у компанії Master of Code LLC. У Geekhub Альона викладає Project Management. </p>
+                        </li>
+                        <li>
+                            <img src="images/neek_kurat.png" />
+                            <h3>Нік Курат</h3>
+                            <p>Нік займається розвитком бізнесу компанії Master of Code LLC та розвитком стартапу presentain.com . У складі Geekhub Нік викладає Project Management та працює над брендінгом та маркетингом проекту.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Основи роботи інтернету (сервер, браузер, домен і т.п.)</li>
+                        <li>Agile (маніфест)</li>
+                        <li>Scrum (основні принципи)</li>
+                        <li>Знання англійської мови (високий рівень) - обов’язково!</li>
+                        <li>Лідерські якості</li>
+                        <li>IT background</li>
+                        <li>Досвід організації заходів, проектів"</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-qa.png" />
+                    <h2>Quality Assurance</h2>
+                    <p>Курс для тих, хто вміє конструктивно критикувати та хотів би з цього навику зробити цікаву інноваційну професію. Ми допоможемо розібратися у непростій науці тестування програмного забезпечення та веб-сайтів, навчимо писати змістовні тест-плани, підкріпивши знання практичними навичками, розберемо базу автоматизованого тестування, зробивши впевнені кроки у її засвоєнні, та спробуємо виховати у студентах тягу до прекрасних продуктів з чудовим юзабіліті та безбажним змістом.
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/elena_perekopskaya.png" />
+                            <h3>Олена Перекопська</h3>
+                            <p>Олена має значний досвід у сфері контролю якості та управління проектами. У GeekHub викладає Quality Assurance.</p>
+                        </li>
+                        <li>
+                            <img src="images/irina_nikulina.png" />
+                            <h3>Ірина Нікуліна</h3>
+                            <p>Випускниця GeekHub, зараз працює QA інженером у MasterOfCode. У GeekHub викладає Quality Assurance.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Знання загальної термінології тестування програмного забезпечення та сайтів</li>
+                        <li>Розуміння основних принципів тестування</li>
+                        <li>Розуміння принципів роботи різних систем та програмних продуктів</li>
+                        <li>Базовий рівень англійської</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-english.png" />
+                    <h2>Business English</h2>
+                    <p>Навички спілкування у діловому середовищі. Якщо ви лідер команди або менеджер проектів, Business English допоможе вам здобути корисні інструменти для ефективних комунікацій як всередині команди так і з клієнтами.</p>
+
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li>
+                            <img src="images/tim_phipps.png" />
+                            <h3>Tim Phipps</h3>
+                            <p>Since gaining his CELTA teaching qualification, Tim has specialised in private English lessons, meeting a wide range of student needs. At Geekhub Tim leads the Technical English course.</p>
+                        </li>
+                        <li>
+                            <img src="images/viktor_yevpak.png" />
+                            <h3>Віктор Євпак</h3>
+                            <p>Loves briniging the best in people, helping them realise their potential as professionals and humans. Has a beautiful wife and two amazing children. He is a lawyer by education, enterprenuer by calling and story-teller by hobby. У GeekHub викладає Business English.</p>
+                        </li>
+                    </ul>
+
+                    <h3 style="display: none" >ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul style="display: none" class="questions">
+                        <li>dcvd</li>
+                        <li>dfvfvdf</li>
+                        <li>fvdvdv</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-webdesign.png" />
+                    <h2>Web & Mobile Design</h2>
+                    <p>Це динамічний та насиченний навчальний курс, який дає змогу отримати базові знання з Веб дизайну та дизайну мобільних додатків. Ви дізнаєтесь як проектувати інтерфейси та робити сайти зручними для відвідувачів. Отримаєте базові знання по композиції, фірмовому стилю, шрифтам та роботі з ком'ютерними програмами для подальшого розвитку у галузі дизайну.</p>
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li class="odd">
+                            <img src="images/bogdan_sviridov.png" />
+                            <h3>Богдан Свиридов</h3>
+                            <p>Богдан має великий досвід у дизайні. Його пристрасть – зручні, прості та зрозумілі речі. У GeekHub Богдан викладає Web & Mobile Design.</p>
+                        </li>
+                        <li>
+                            <img src="images/tanya_ignatenko.png" />
+                            <h3>Таня Ігнатенко</h3>
+                            <p>У Pixel Grow Тетяна займається веб дизайном та дизайном мобільних додатків. Вона приділяє багато уваги невеликим але важливим деталям. Полюбляє лаконічний дизайн та котів :) У GeekHub викладає Web & Mobile Design.</p>
+                        </li>
+                        <li>
+                            <img src="images/olexandr_bula.png" />
+                            <h3>Олександр Булла</h3>
+                            <p>Дизайнер eKreative. У GeekHub викладає Web & Mobile Design.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                         <li>Що таке Веб дизайн, та в чому його відмінність від графічного дизайну та дизайну поліграфії.</li>
+                         <li>Що таке UI та UX (розуміння навіщо це потрібно).</li>
+                         <li>Як та навіщо малювати Sketch, Wireframe, Mockup.</li>
+                         <li>Базові вміння накреслити лінію, зробити простий ескіз.</li>
+                         <li>Принести приклади своїх робіт по веб дизайну (реальні чи пробні проекти)</li>
+                         <li>Гарний смак та бажання постійно його розвивати.</li>
+                    </ul>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+                <li>
+                    <img src="images/icon-gamedesign.png" />
+                    <h2>Game Production</h2>
+                    <p>Часи, коли ігри створювали фанатики-одинаки давно позаду. Сьогодні шалено зростаюча індустрія геймдеву відкриває двері широкому колу спеціалістів. Курс Game Production познайомить учнів із процессом створення комп’ютерних ігр, особливостями ведення GDD, допоможе розібратися з ігровими механіками, жанрами, тенденціями, термінологією... А ще, надихне спостерігати, помічати, пробувати, вивчати життя, бо, як не дивно, часто саме це визначає якісний геймдев :)</p>
+                    <h3>Команда</h3>
+                    <ul class="team">
+                        <li class="odd">
+                            <img src="images/viktoria_odnokoz.png" />
+                            <h3>Вікторія Однокоз</h3>
+                            <p>Вікторія має за плечима декілька випущених ігр у ролі від геймдизайнера до керівника проекту. Зараз у ENKI Games займається розвитком основного продукту компанії. У GeekHub викладає Game Development.</p>
+                        </li>
+                    </ul>
+
+                    <h3>ТЕМИ ПИТАНЬ НА ЕКЗАМЕНI</h3>
+                    <ul class="questions">
+                        <li>Які ігрові жанри знаєте?</li>
+                        <li>В які ігри, в яких жанрах грали в останній час (покажіть мобільний, які ігри там є :)?)</li>
+                        <li>Что таке розробка гри (по вашому)?</li>
+                        <li>На якій ролі у геймдев команді бачите себе і чому?</li>
+                        <li>Якими навиками має володіти геймдизайнер?</li>
+                        <li>У чому сила Pacman чи Mr Mario? :)</li>
+                        <li>Створіть квест із того, что бачите у кімнаті.</li>
+                    </ul>
+                    <h3>Слово від викладачів</h3>
+                    <p>Человек может пройти курс, быть при этом программистом \ тестером \ проект-менеджером и т.д. Но этот человек будет иметь представление о том, с чего начинается продукт, зачем его делать, для кого, как анализировать данные, как продвигать его, как управлять продуктом, кого для этого надо поключить и т.д. Без понимания хотябы базовых вещей: целевая аудитория, рынок, конкуренты, спрос, статистических метрик, социальных сетей, как все это работает и какие бывают инструменты, мне кажется вообще разработка невозможна, ни игр, ни приложений, ни сайтов. Если говорить о продукте, а не аутсорсе.</p>
+                    <p>Человек, закончив курс, в компании может начать с тестера \ геймдизайнера \ QA \ маркетолога \ саппорта \ аналитика статистики, неважно. Главное, чтобы у него было понимание того, чем он занимается, как может влиять на процессы и что должно получиться в конечном итоге.</p>
+                    <a class="register" href="#">Зареєструватися</a>
+                </li>
+            </ul>
+        </div>
+	</div><!-- content -->
+    <ul id="footer">
+        <li>
+            <ul class="nav">
+                <li><a href="/">Головна</a></li>
+                <li><a href="/about.html">Про GeekHub</a></li>
+                <li><a href="/team.html">Команда</a></li>
+                <li><a href="/contacts.html">Зв’язок</a></li>
+            </ul>
+        </li>
+        <li>© Copyright 2011</li>
+    </ul>
+</div>
+</body>
+</html>

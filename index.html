@@ -1,222 +1,275 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8" />
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <title>GeekHub. Educating talented youth.</title>
-    <link rel="stylesheet" type="text/css" media="all" href="/styles/style.css" />
-    <meta name="description" content="GeekHub is a free program lead by a team of IT professionals, that aims to teach talented youth the practical skills needed to launch a successful career in software development." />
-    <meta name="keywords" content="GeekHub, IT, software, education" />
-    <link rel="canonical" href="http://thegeekhub.org/" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>GeekHub - отримай практичні знання в сфері IT</title>
+    <meta name="description" content="GeekHub надає можливість отримати практичні знання та навички в сфері розробки програмного забезпечення">
+    <meta name="keywords" content="GeekHub, ГікХаб, Черкаси, Cherkassy">
 
-    <script type="text/javascript" src="/js/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript" src="/js/stepcarousel.js"></script>
-    <script type="text/javascript">
-        var features_gallery = {
-            galleryid: 'features',
-            beltclass: 'content',
-            panelclass: 'slide',
-            autostep: {enable:true, moveby:1, pause:10000},
-            panelbehavior: {speed:500, wraparound:true, wrapbehavior:'pushpull|slide', persist:true},
-            defaultbuttons: {enable: false, moveby: 1, leftnav: ['images/slide_btn.png.png', -5, 80], rightnav: ['images/slide_btn.png.png', -20, 80]},
-            statusvars: ['statusA', 'statusB', 'statusC'],
-            contenttype: ['inline']
-        };
-        stepcarousel.setup(features_gallery);
 
-    </script>
+	<link href="style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/flipclock.css">
 
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="./js/jquery-1.6.4.min.js"></script>
+    <script src="./js/libs/prefixfree.min.js"></script>
+    <script type="text/javascript" src="./js/flipclock.min.js"></script>
+    <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
 
     <script type="text/javascript">
+        $(function(){
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-27082120-2']);
-        _gaq.push(['_trackPageview']);
+            var t1 = new Date("September 17, 2014 00:00:00");
+            var t2 = new Date();
+            var seconds = (t1.getTime() - t2.getTime()) / 1000;
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+            var Seconds_Between_Dates = Math.abs(seconds);
 
-    </script>
-</head>
+            var clock = $('.countdown').FlipClock(Seconds_Between_Dates,{clockFace:'DailyCounter',countdown:true,	showSeconds: false});
 
 
-<body>
-<div id="wrap">
-    <div id="header">
-        <h1><a href="/">GeekHub</a></h1>
-
-        <ul class="nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li ><a href="/about.html">About</a>
-                <ul>
-                    <li><a href="/about/vision.html">Vision</a></li>
-                    <li><a href="/about/mission.html">Mission</a></li>
-                    <li><a href="/about/goals.html">Goals</a></li>
-                    <li><a href="/about/team.html">The Team</a></li>
-                </ul>
-            </li>
-            <li ><a href="/programs.html">Programs</a></li>
-            <li ><a href="/testimonials.html">Testimonials</a></li>
-            <li ><a href="/blog.html">Blog</a></li>
-            <li ><a href="/contacts.html">Contact Us</a></li>
-        </ul>
-        <span class="line"></span>
-        <div class="video">
-            <div>
-                <img src="/images/video_splash.png" class="play"/>
-                <iframe id="player" src="http://player.vimeo.com/video/42685887?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=FFFFFF&amp;player_id=player" width="493" height="276" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
-        </div>
-        <script src="http://a.vimeocdn.com/js_v6/froogaloop2.min.js?77440-1338364748"></script>
-        <script>
-            jQuery('.video img').click(function(){
-                jQuery(this).fadeOut(1000);
-            });
-            (function(){
-                var vimeoPlayers = document.querySelectorAll('iframe'),
-                        player;
-
-                for (var i = 0, length = vimeoPlayers.length; i < length; i++) {
-                    player = vimeoPlayers[i];
-                    $f(player).addEvent('ready', ready);
+            function isEmailValid(email){
+                var pass = /^[a-z0-9._%+-]+@[a-z0-9._-]+\.[a-z]{2,6}$/i;
+                if(!pass.test(email)){
+                    return false;
                 }
-
-                function addEvent(element, eventName, callback) {
-                    if (element.addEventListener) {
-                        element.addEventListener(eventName, callback, false);
-                    }
-                    else {
-                        element.attachEvent('on' + eventName, callback);
-                    }
-                }
-
-                function ready(player_id) {
-                    var container = document.getElementById(player_id).parentNode.parentNode,
-                            froogaloop = $f(player_id),
-                            apiConsole = container.querySelector('.console .output');
-
-                    function apiLog(message) {
-                        apiConsole.innerHTML = message + '\n' + apiConsole.innerHTML;
-                    }
-
-                    function setupSimpleButtons() {
-                        var playBtn = container.querySelector('.play');
-
-                        addEvent(playBtn, 'click', function() {
-                            froogaloop.api('play');
-                        }, false);
-                    }
-
-                    setupSimpleButtons();
-                }
-            })();
-        </script>
-        <h2>GeekHub</h2>
-        <p>GeekHub is a free program lead by a team<br />of IT professionals, that aims to teach<br />talented youth the practical skills needed to launch a successful career in software development.</p>
-        <a class="contacts" href="/contacts.html">Contact Us</a>
-        <img src="/images/splash.png" alt="splash" />
-    </div>
-    <div class="home page page-id-24 page-parent page-template page-template-home-php">
-        <div id="content">
-            <div class="home">
-                <h2>Testimonials</h2>
-                <span class="shade-l"></span><span class="shade-r"></span>
-                <div id="features">
-                    <ul class="content">
-                        <li class="slide"><span><img src="/images/f-labay.jpg" alt="" /></span><h4>Alex Labay</h4><p>These guys really managed to do it, explaining even difficult terms and processes in a funky and understandable way.</p></li>
-                        <li class="slide"><span><img src="/images/f-chernov.jpg" alt="" /></span><h4>Alexandr Chernov</h4><p>The most important thing in Geekhub is that this program allows students and people with no experience to realize and implement their potential.</p></li>
-                        <li class="slide"><span><img src="/images/f-tkachenko.jpg" alt="" /></span><h4>Alexander Tkachenko</h4><p>I think Geekhub is a great opportunity to start your career in IT. Geekhub - is exactly what we need. You ask me what it can offer? The answer is rather simple but precise - really new technologies, new knowledge and of course new friends.</p></li>
-                        <li class="slide"><span><img src="/images/f-tsibrovski.jpg" alt="" /></span><h4>Sergey Tsibrovski</h4><p>Geekhub is a place where a novice programmer can receive necessary knowledge which can help them start a career in IT. The prorgram helps me apply my knowledge to real world tasks, something that I cannot get in the university.</p></li>
-                    </ul>
-                </div>
-                <div id="features-paginate">
-                    <img src="/images/slide_btn.png" data-over="/images/slide_btn.png" data-select="/images/slide_btn_active.png" data-moveby="1" />
-                </div>
-                <h2>The courses</h2>
-                <ul class="types">
-                    <li><img src="images/html_css.png"/><br />
-                        <h3>Front-end development</h3>
-                        <p>The “Front-end development” course deals with all things that the end user interacts with in the system. Students in this course learn semantic markup, (X)HTML, CSS, Javascript, AJAX, integration with popular services like Facebook, Twitter, Paypal, Authorize.net, etc.</p>
-                    </li>
-                    <li><img src="images/web_programming.png"/><br />
-                        <h3>Advanced PHP and frameworks</h3>
-                        <p>In this class, students are learning object oriented programming and the most popular PHP framework to date &#8212; Symfony. Students of this course are able to implement business logic for web-based products.</p>
-                    </li>
-                </ul>
-                <ul class="social_share">
-                    <li><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FGeekHub%2F158983477520070&amp;width=276&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;height=218&amp;appId=264614506901604" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:276px; height:218px;" allowTransparency="true"></iframe></li>
-                    <li class="sertificates_list"><h4><a href="/certified-professionals">Certified professionals</a></h4></li>
-                    <li>
-                        <h4>Our sponsors</h4>
-                        <ul>
-                            <li class="de"><a href="http://povnahata.com">The House of Gospel</a></li>
-                            <li class="moc"><a href="http://masterofcode.com">Masterofcode LTD</a></li>
-                            <li class="sergium"><a href="http://sergium.net">SerGium.net</a></li>
-                            <li class="clear left stuff"><a href="http://svai.net/">svai.net</a></li>
-                            <li class="youthog"><a href="http://yothog.com">yothog.com</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <ul id="footer">
-        <li style="width:60%">
-            <ul class="nav">
-                <li><a href="/">Home</a></li>
-                <li class="active"><a href="/about.html">About</a>
-                    <ul>
-                        <li><a href="/about/vision.html">Vision</a></li>
-                        <li><a href="/about/mission.html">Mission</a></li>
-                        <li><a href="/about/goals.html">Goals</a></li>
-                        <li><a href="/about/team.html">The Team</a></li>
-                    </ul>
-                </li>
-                <li><a href="/programs.html">Programs</a></li>
-                <li><a href="/testimonials.html">Testimonials</a></li>
-                <li><a href="/supporters.html">Supporters</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contacts.html">Contact Us</a></li>
-            </ul>
-        </li>
-        <li style="width:39%">&copy; Copyright 2011</li>
-    </ul>
-</div>
-<script type="text/javascript">
-    // <![CDATA[
-    var disqus_shortname = 'geekhub';
-    (function () {
-        var nodes = document.getElementsByTagName('span');
-        for (var i = 0, url; i < nodes.length; i++) {
-            if (nodes[i].className.indexOf('dsq-postid') != -1) {
-                nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
-                url = nodes[i].parentNode.href.split('#', 1);
-                if (url.length == 1) url = url[0];
-                else url = url[1]
-                nodes[i].parentNode.href = url + '#disqus_thread';
+                return true;
             }
-        }
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://disqus.com/forums/' + disqus_shortname + '/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    //]]>
-</script>
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-27082120-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
+
+            $('.types li').click(function(){
+                var index = $(this).index();
+                window.location = '/details.html?'+index;
+                return false;
+            })
+
+            $('#header form').submit(function(){
+                var email = $(this).find('.email');
+                var loader = $(this).find('span');
+                var val = email.val();
+
+                if (!isEmailValid(val)) {
+                    email.addClass('error');
+                    email.focus();
+                    return false;
+                }
+                email.removeClass('error');
+                email.attr('disabled',true);
+                loader.fadeIn(300);
+
+                var data = { email: val };
+
+                $.post('http://geekhub.ck.ua/notify.php', data, function(){
+                    loader.fadeOut(300);
+                    email.attr('disabled',false);
+                    email.val('');
+                    alert('Готово');
+                });
+
+                return false;
+            });
+        });
+    </script>
+	<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27082120-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-    })();
-</script>
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+	</script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter17027506 = new Ya.Metrika({id:17027506, enableAll: true, webvisor:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/17027506" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1><a href="/">GeekHub</a></h1>
+        <ul class="nav">
+            <li class="active"><a href="/">Головна</a></li>
+            <li><a href="/about.html">Про GeekHub</a></li>
+            <li><a href="/team.html">Команда</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/contacts.html">Зв'язок</a></li>
+        </ul>
+
+        <ul class="links">
+            <li class="fb"><a href="http://www.facebook.com/pages/GeekHub/158983477520070">facebook</a></li>
+            <li class="vk"><a href="http://vkontakte.ru/geekhub">Вконтакте</a></li>
+            <li class="tw"><a href="http://twitter.com/#!/geek_hub">twitter</a></li>
+            <li class="yb"><a href="http://www.youtube.com/user/GeekHubchannel">youtube</a></li>
+        </ul>
+        <span class="line"></span>
+
+        <h4 class="registration">Реєстрацію на 4й сезон закрито</h4>
+        <p class="note">*залиште нам ваш емейл і ми повідомимо вас про початок реєстрації</p>
+        <form action="#">
+            <fieldset>
+                <span></span>
+                <input type="text" class="email" placeholder="Ваш email" />
+                <input type="submit" value="Відіслати" />
+            </fieldset>
+
+        </form>
+        <img src="images/splash.png" alt="splash" />
+	</div><!-- header -->
+	<div id="content">
+        <div class="home">
+            <h2>ДЕТАЛІ КУРСІВ ТА РЕЄСТРАЦІЯ</h2>
+            <ul class="types">
+                <li class="left-col">
+                	<img src="images/icon-frontend.png" />
+                    <a class="title" href="#"><h3>Frontend + CMS</h3></a>
+                    <p>Цей курс допоможе вам навчитися створювати веб сайти на основі системи керування контентом. Все, від скінування дизайну до підключення CMS. Цей курс дасть вам чудовий старт для фріланса або роботи в компанії.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-adv-cms.png" />
+                    <a class="title" href="#"><h3>Advanced CMS</h3></a>
+                    <p>Курс для тих, хто хоче навчитися створювати сайти різного рівня складності за допомогою популярних CMS Wordpress та Drupal. Якщо ви хочете робити вебсайти як професіонал, цей курс для вас. Особливості різних CMS, використання та написання плагінів та компонентів, інтеграція із соціальними мережами та сторонніми сервісами.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-adv-php.png" />
+                    <a class="title" href="#"><h3>Advanced PHP</h3></a>
+                    <p>Для тих хто хоче розвивати свої базові навички в PHP. Курс заглиблюється у вивчення ООП, MVC та паттернiв проетування на базі найпопулярнішого php фреймворку Symfony2.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li class="left-col">
+                    <img src="images/icon-js.png" />
+                    <a class="title" href="#"><h3>JavaScript</h3></a>
+                    <p>Все найцікавіше відбувається в браузері, а не на сервері. Javascript - це той інструмент який допоможе вам створювати дійсно зручні та швидкі веб сторінки.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-ios.png" />
+                    <a class="title" href="#"><h3>iOS</h3></a>
+                    <p>Курс для швидкого старту в розробці програмного забезпечення під популярну мобільну платформу iOS. </p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-android.png" />
+                    <a class="title" href="#"><h3>Android</h3></a>
+                    <p>Android - найпопулярніша операційна система для смартфонів. В цьому курсі ми охопимо найважливіші елементи побудови додатків для цієї платформи. Ознайомимося з основними компонентами UI та UX. Навчимося їх правильно використовувати. Також навчимося працювати в команді та побудуємо корисні додатки.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li class="left-col">
+                    <img src="images/icon-ruby.png" />
+                    <a class="title" href="#"><h3>Ruby on Rails</h3></a>
+                    <p>Курс навчить Вас працювати з популярним фреймворком для розробки веб-сервісів на мові програмування Ruby. </p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-grails.png" />
+                    <a class="title" href="#"><h3>Groovy & Grails</h3></a>
+                    <p>Познайомтесь з одним з найпотужніших фреймворків для швидкої розробки веб-додатків Groovy & Grails.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-java.png" />
+                    <a class="title" href="#"><h3>Java for Web</h3></a>
+                    <p>Java - це основа ентерпрайз технологій. Ви ознайомитесь із мовою, основними классами і пакетами, а також найбільш популярними та потужними фреймворками для розробки веб-додатків.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li class="left-col">
+                    <img src="images/icon-pm.png" />
+                    <a class="title" href="#"><h3>Project Management</h3></a>
+                	<p>Щоб стати досвідченим менеджером проектів потрібні роки спроб та помилок. Geekhub дає вам можливість почати набувати практичні навички вже зараз.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-qa.png" />
+                    <a class="title" href="#"><h3>Quality Assurance</h3></a>
+                    <p>Курс для тих, хто вміє конструктивно критикувати та хотів би з цього навику зробити цікаву інноваційну професію.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-english.png" />
+                    <a class="title" href="#"><h3>Business English</h3></a>
+                    <p>Якщо ви лідер команди або менеджер проектів, Business English допоможе вам здобути корисні інструменти для ефективних комунікацій як всередині команди так і з клієнтами.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-webdesign.png" />
+                    <a class="title" href="#"><h3>Web & Mobile Design</h3></a>
+                    <p>Це динамічний та насиченний навчальний курс, який дає змогу отримати базові знання з Веб дизайну та дизайну мобільних додатків. Ви дізнаєтесь як проектувати інтерфейси та робити сайти зручними для відвідувачів. Отримаєте базові знання по композиції, фірмовому стилю, шрифтам та роботі з ком'ютерними програмами для подальшого розвитку у галузі дизайну.</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                    <img src="images/icon-gamedesign.png" />
+                    <a class="title" href="#"><h3>Game Production</h3></a>
+                    <p>Часи, коли ігри створювали фанатики-одинаки давно позаду. Сьогодні шалено зростаюча індустрія геймдеву відкриває двері широкому колу спеціалістів. Курс Game Production познайомить учнів із процессом створення комп’ютерних ігр, особливостями ведення GDD, допоможе розібратися з ігровими механіками, жанрами, тенденціями, термінологією... А ще, надихне спостерігати, помічати, пробувати, вивчати життя, бо, як не дивно, часто саме це визначає якісний геймдев :)</p>
+                    <a href="#">Докладніше + реєстрація</a>
+                </li>
+                <li>
+                </li>
+
+
+
+
+
+            </ul>
+            <ul class="social_share">
+                <li id="vk">
+                    <script type="text/javascript">
+                        VK.Widgets.Group("vk", {mode: 0, width: "276", height: "240"}, 30111409);
+                    </script>
+                </li>
+                <li class="sertificates_list">
+                	<h4><a href="/certified-professionals.html">Сертифiкованi професiонали</a></h4>
+                </li>
+                <li>
+                    <h4>Наші Спонсори</h4>
+                    <ul>
+                        <li class="de"><a href="http://povnahata.com">Дім Євангелія</a></li>
+                        <li class="moc"><a href="http://masterofcode.com">Masterofcode LTD</a></li>
+                        <li class="sergium"><a href="http://sergium.net">SerGium.net</a></li>
+                        <li class="clear left stuff"><a href="http://jetbrains.com/">JetBrains.com</a></li>
+                        <li class="ucoz"><a href="http://rabota.ucoz.ua/">ucoz.ua</a></li>
+                        <li class="spd-ukraine"><a href="http://spd-ukraine.com/">SPD-Ukraine.com</a></li>
+                        <li class="ekreative"><a href="http://www.ekreative.com/">Ekreative.com</a></li>
+                        <li class="n3wnormal"><a href="http://n3wnormal.com/">n3wnormal.ua</a></li>
+                        <li class="in-ck-ua"><a href="http://in.ck.ua/">in.ck.ua</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+	</div><!-- content -->
+    <ul id="footer">
+        <li>
+            <ul class="nav">
+                <li><a href="/">Головна</a></li>
+                <li><a href="/about.html">Про GeekHub</a></li>
+                <li><a href="/team.html">Команда</a></li>
+                <li><a href="/contacts.html">Зв'язок</a></li>
+            </ul>
+        </li>
+        <li>© Copyright 2011</li>
+    </ul>
+</div>
 </body>
 </html>
