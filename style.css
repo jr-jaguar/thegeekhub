@@ -129,34 +129,12 @@ body span.line
     font-size:28px;
     background:url('/images/registration-button.png') no-repeat;
 }
-/*#header > a {*/
-	/*overflow: hidden;*/
-    /*display:block;*/
-    /*position: relative;*/
-    /*width:310px;*/
-    /*height:56px;*/
-    /*margin: 0 auto 24px;*/
-    /*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
-    /*color:#fff;*/
-    /*text-align:center;*/
-    /*font-size:28px;*/
-    /*background:url('images/registration_button.png') no-repeat;*/
-    /*text-indent: -700px;*/
-	/*z-index:2;*/
-}
 #header > a:hover {
     background-position: 0 -56px;
 }
 #header > a:active {
     background-position: 0 -112px;
 }
-/*#header > img {*/
-    /*position:absolute;*/
-	/*top:165px;*/
-	/*left:315px;*/
-    /*z-index:1;*/
-	/*display:block;*/
-/*}*/
 #header > img {
     position: absolute;
     bottom: 0;
