@@ -124,19 +124,63 @@
             <li class="yb"><a href="http://www.youtube.com/user/GeekHubchannel">youtube</a></li>
         </ul>
         <span class="line"></span>
+        <div class="video">
+            <div>
+                <img src="/images/video_splash.png" class="play" />
+                <iframe id="player" src="http://player.vimeo.com/video/42685887?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=FFFFFF&amp;player_id=player" width="493" height="276" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+        </div>
+        <script src="http://a.vimeocdn.com/js_v6/froogaloop2.min.js?77440-1338364748"></script>
+        <script>
+            jQuery('.video img').click(function(){
+                jQuery(this).fadeOut(1000);
+            });
+            (function(){
+                var vimeoPlayers = document.querySelectorAll('iframe'),
+                        player;
 
-        <h4 class="registration">Реєстрацію на 4й сезон закрито</h4>
-        <p class="note">*залиште нам ваш емейл і ми повідомимо вас про початок реєстрації</p>
-        <form action="#">
-            <fieldset>
-                <span></span>
-                <input type="text" class="email" placeholder="Ваш email" />
-                <input type="submit" value="Відіслати" />
-            </fieldset>
+                for (var i = 0, length = vimeoPlayers.length; i < length; i++) {
+                    player = vimeoPlayers[i];
+                    $f(player).addEvent('ready', ready);
+                }
 
-        </form>
-        <img src="images/splash.png" alt="splash" />
-	</div><!-- header -->
+                function addEvent(element, eventName, callback) {
+                    if (element.addEventListener) {
+                        element.addEventListener(eventName, callback, false);
+                    }
+                    else {
+                        element.attachEvent('on' + eventName, callback);
+                    }
+                }
+
+                function ready(player_id) {
+                    var container = document.getElementById(player_id).parentNode.parentNode,
+                            froogaloop = $f(player_id),
+                            apiConsole = container.querySelector('.console .output');
+
+                    function apiLog(message) {
+                        apiConsole.innerHTML = message + '\n' + apiConsole.innerHTML;
+                    }
+
+                    function setupSimpleButtons() {
+                        var playBtn = container.querySelector('.play');
+
+                        addEvent(playBtn, 'click', function() {
+                            froogaloop.api('play');
+                        }, false);
+                    }
+
+                    setupSimpleButtons();
+                }
+            })();
+        </script>
+        <h2>GeekHub</h2>
+        <p>GeekHub is a free program lead by a team<br />of IT professionals, that aims to teach<br />talented youth the practical skills needed to launch a successful career in software development.</p>
+
+        <a class="contacts" href="/contacts.html">Contact Us</a>
+        <img src="images/splash1.png" alt="splash" />
+    </div>
+    <!-- header -->
 	<div id="content">
         <div class="home">
             <h2> GEEKHUB COURSES</h2>
